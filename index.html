@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La vie à l'université</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            color-scheme: light;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eef2ff, #f0fdfa);
+            color: #1f2937;
+        }
+
+        .entete {
+            max-width: 1400px;
+            margin: 0 auto 20px;
+        }
+
+        .entete h1 {
+            margin: 0 0 8px;
+            color: #1e3a8a;
+        }
+
+        .entete p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .grille {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .case {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            min-height: 150px;
+            padding: 16px;
+            background: linear-gradient(135deg, #fff, #f8faff);
+            border: 1px solid #dbeafe;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgb(30 58 138 / 8%);
+            animation: apparition 550ms ease both;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+
+        .case:hover {
+            transform: translateY(-4px);
+            border-color: #93c5fd;
+            box-shadow: 0 12px 24px rgb(30 58 138 / 16%);
+        }
+
+        .photo {
+            position: relative;
+            flex: 0 0 36%;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            transition: transform 300ms ease;
+        }
+
+        .case:hover .photo img {
+            transform: scale(1.06);
+        }
+
+        .numero {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: grid;
+            width: 36px;
+            height: 36px;
+            place-items: center;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            background: #0f766e;
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+        }
+
+        .texte {
+            flex: 1;
+            display: grid;
+            gap: 10px;
+            align-content: center;
+        }
+
+        .texte h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #1e3a8a;
+        }
+
+        .texte p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .details {
+            display: grid;
+            gap: 4px;
+        }
+
+        .details strong {
+            color: #0f766e;
+        }
+
+        .case:nth-child(3n + 2) {
+            animation-delay: 80ms;
+        }
+
+        .case:nth-child(3n) {
+            animation-delay: 160ms;
+        }
+
+        @keyframes apparition {
+            from {
+                opacity: 0;
+                translate: 0 12px;
+            }
+
+            to {
+                opacity: 1;
+                translate: 0 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 16px;
+            }
+
+            .grille {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .case {
+                align-items: flex-start;
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .photo {
+                width: 35%;
+                flex-basis: 35%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="entete">
+        <h1>La vie à l'université</h1>
+        <p>À travers ces photos, découvrons les études, les pauses et les souvenirs qui composent le quotidien d'une étudiante à l'Université catholique du Congo.</p>
+    </header>
+
+    <main class="grille">
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">01</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.11%20PM.jpeg" alt="Angèle assise dans un espace vert du campus">
+            </div>
+            <div class="texte">
+                <h2>Une pause sur le campus</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Dans les espaces verts du campus, Angèle prend un moment de repos entre ses activités et profite du cadre universitaire.</p>
+                    <p><strong>Lieu :</strong> Espace vert de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">02</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.12%20PM.jpeg" alt="Angèle près d'une fenêtre avec son téléphone">
+            </div>
+            <div class="texte">
+                <h2>Rester informée</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Depuis sa chambre, elle consulte son téléphone avant de poursuivre ses activités universitaires.</p>
+                    <p><strong>Lieu :</strong> Sa chambre</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">03</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.13%20PM.jpeg" alt="Angèle présente une feuille de travail universitaire">
+            </div>
+            <div class="texte">
+                <h2>Présenter son travail</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Angèle présente son travail pratique de narratologie, un exemple des exercices et travaux réalisés pendant ses études.</p>
+                    <p><strong>Lieu :</strong> Campus de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">04</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.15%20PM.jpeg" alt="Angèle regarde le paysage depuis une fenêtre du campus">
+            </div>
+            <div class="texte">
+                <h2>Penser à son avenir</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Face au paysage, elle s'accorde une pause pour réfléchir à son parcours et à ses objectifs.</p>
+                    <p><strong>Lieu :</strong> Campus de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">05</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.16%201PM.jpeg" alt="Angèle étudie avec un livre ouvert">
+            </div>
+            <div class="texte">
+                <h2>Étudier avec détermination</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Un livre ouvert près d'elle, Angèle rêve de poursuivre ses études en communications sociales à l'Université catholique du Congo, d'obtenir sa licence et de s'accomplir.</p>
+                    <p><strong>Lieu :</strong> Campus de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">06</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.16%20PM.jpeg" alt="Portrait d'Angèle dans un espace extérieur">
+            </div>
+            <div class="texte">
+                <h2>Garder confiance</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> La concentration et la persévérance aident les étudiants à avancer vers leurs objectifs.</p>
+                    <p><strong>Lieu :</strong> Espace extérieur de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">07</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.17%202PM.jpeg" alt="Angèle prend une pause, la tête appuyée sur sa main">
+            </div>
+            <div class="texte">
+                <h2>Prendre le temps de souffler</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Les longues journées d'étude demandent aussi de faire une pause et de reprendre des forces.</p>
+                    <p><strong>Lieu :</strong> Campus de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">08</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.17%20PM.jpeg" alt="Angèle sourit et fait un signe de victoire sur le campus">
+            </div>
+            <div class="texte">
+                <h2>Créer de bons souvenirs</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> La vie universitaire est aussi faite de sourires et de moments de détente qui marquent le parcours étudiant.</p>
+                    <p><strong>Lieu :</strong> Campus de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">09</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.18%203PM.jpeg" alt="Panneau d'entrée de l'Université catholique du Congo">
+            </div>
+            <div class="texte">
+                <h2>Un lieu d'apprentissage</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Le panneau marque l'entrée de l'Université catholique du Congo, lieu de formation et de rencontres.</p>
+                    <p><strong>Lieu :</strong> Entrée de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">10</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.18%20PM.jpeg" alt="Angèle pose sur le campus de l'UCC">
+            </div>
+            <div class="texte">
+                <h2>Être fière de son parcours</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> Un souvenir sur le campus rappelle la fierté de poursuivre son parcours universitaire.</p>
+                    <p><strong>Lieu :</strong> Campus de l'UCC</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="case">
+            <div class="photo">
+                <span class="numero" aria-hidden="true">11</span>
+                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.19%20PM.jpeg" alt="Vue de l'Université catholique du Congo en fin de journée">
+            </div>
+            <div class="texte">
+                <h2>La journée se termine</h2>
+                <div class="details">
+                    <p><strong>Photographe :</strong> Katomba Merveille</p>
+                    <p><strong>Description :</strong> À la fin de la journée, l'université reste un lieu de rencontres, d'apprentissage et de projets.</p>
+                    <p><strong>Lieu :</strong> Université catholique du Congo</p>
+                    <p><strong>Date :</strong> 15 août 2026</p>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
