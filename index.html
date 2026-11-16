@@ -11,29 +11,41 @@
 
         :root {
             color-scheme: light;
+            --encre: #51465a;
+            --prune: #795b76;
+            --sauge: #829b8e;
+            --papier: #fffdfb;
         }
 
         body {
             margin: 0;
             padding: 24px;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #eef2ff, #f0fdfa);
-            color: #1f2937;
+            font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+            background:
+                radial-gradient(ellipse at top left, #f8eaf0 0, transparent 42%),
+                linear-gradient(135deg, #fbf7f2, #f0f4f0 55%, #f5eff6);
+            color: var(--encre);
         }
 
         .entete {
             max-width: 1400px;
-            margin: 0 auto 20px;
+            margin: 0 auto 28px;
         }
 
         .entete h1 {
-            margin: 0 0 8px;
-            color: #1e3a8a;
+            margin: 0 0 10px;
+            color: var(--prune);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 500;
+            letter-spacing: 0.02em;
         }
 
         .entete p {
             margin: 0;
-            line-height: 1.5;
+            max-width: 760px;
+            color: #726a73;
+            line-height: 1.7;
         }
 
         .grille {
@@ -49,19 +61,19 @@
             align-items: center;
             gap: 18px;
             min-height: 150px;
-            padding: 16px;
-            background: linear-gradient(135deg, #fff, #f8faff);
-            border: 1px solid #dbeafe;
-            border-radius: 14px;
-            box-shadow: 0 4px 14px rgb(30 58 138 / 8%);
+            padding: 18px;
+            background: linear-gradient(135deg, var(--papier), #fcf8fa);
+            border: 1px solid #eee2e8;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px rgb(94 69 91 / 7%);
             animation: apparition 550ms ease both;
             transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
         }
 
         .case:hover {
             transform: translateY(-4px);
-            border-color: #93c5fd;
-            box-shadow: 0 12px 24px rgb(30 58 138 / 16%);
+            border-color: #d9b8c8;
+            box-shadow: 0 12px 26px rgb(94 69 91 / 13%);
         }
 
         .photo {
@@ -91,12 +103,12 @@
             width: 36px;
             height: 36px;
             place-items: center;
-            border: 2px solid #fff;
+            border: 2px solid var(--papier);
             border-radius: 50%;
-            background: #0f766e;
+            background: var(--sauge);
             color: #fff;
             font-weight: 700;
-            box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+            box-shadow: 0 2px 8px rgb(81 70 90 / 20%);
         }
 
         .texte {
@@ -108,22 +120,27 @@
 
         .texte h2 {
             margin: 0;
-            font-size: 1.2rem;
-            color: #1e3a8a;
+            color: var(--prune);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.3rem;
+            font-weight: 500;
+            line-height: 1.25;
         }
 
         .texte p {
             margin: 0;
-            line-height: 1.5;
+            color: #716a72;
+            line-height: 1.6;
         }
 
         .details {
             display: grid;
-            gap: 4px;
+            gap: 6px;
         }
 
         .details strong {
-            color: #0f766e;
+            color: #718b7d;
+            font-weight: 600;
         }
 
         .case:nth-child(3n + 2) {
@@ -191,7 +208,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">01</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.11%20PM.jpeg" alt="Angèle assise dans un espace vert du campus">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.11%20PM.jpeg" alt="Angèle assise dans un espace vert du campus">
             </div>
             <div class="texte">
                 <h2>Une pause sur le campus</h2>
@@ -207,7 +224,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">02</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.12%20PM.jpeg" alt="Angèle près d'une fenêtre avec son téléphone">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.12%20PM.jpeg" alt="Angèle près d'une fenêtre avec son téléphone">
             </div>
             <div class="texte">
                 <h2>Rester informée</h2>
@@ -223,7 +240,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">03</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.13%20PM.jpeg" alt="Angèle présente une feuille de travail universitaire">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.13%20PM.jpeg" alt="Angèle présente une feuille de travail universitaire">
             </div>
             <div class="texte">
                 <h2>Présenter son travail</h2>
@@ -255,7 +272,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">05</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.16%201PM.jpeg" alt="Angèle étudie avec un livre ouvert">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.16%201PM.jpeg" alt="Angèle étudie avec un livre ouvert">
             </div>
             <div class="texte">
                 <h2>Étudier avec détermination</h2>
@@ -271,7 +288,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">06</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.16%20PM.jpeg" alt="Portrait d'Angèle dans un espace extérieur">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.16%20PM.jpeg" alt="Portrait d'Angèle dans un espace extérieur">
             </div>
             <div class="texte">
                 <h2>Garder confiance</h2>
@@ -287,7 +304,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">07</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.17%202PM.jpeg" alt="Angèle prend une pause, la tête appuyée sur sa main">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.17%202PM.jpeg" alt="Angèle prend une pause, la tête appuyée sur sa main">
             </div>
             <div class="texte">
                 <h2>Prendre le temps de souffler</h2>
@@ -303,7 +320,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">08</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.17%20PM.jpeg" alt="Angèle sourit et fait un signe de victoire sur le campus">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.17%20PM.jpeg" alt="Angèle sourit et fait un signe de victoire sur le campus">
             </div>
             <div class="texte">
                 <h2>Créer de bons souvenirs</h2>
@@ -319,7 +336,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">09</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.18%203PM.jpeg" alt="Panneau d'entrée de l'Université catholique du Congo">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.18%203PM.jpeg" alt="Panneau d'entrée de l'Université catholique du Congo">
             </div>
             <div class="texte">
                 <h2>Un lieu d'apprentissage</h2>
@@ -335,7 +352,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">10</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.18%20PM.jpeg" alt="Angèle pose sur le campus de l'UCC">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.18%20PM.jpeg" alt="Angèle pose sur le campus de l'UCC">
             </div>
             <div class="texte">
                 <h2>Être fière de son parcours</h2>
@@ -351,7 +368,7 @@
         <article class="case">
             <div class="photo">
                 <span class="numero" aria-hidden="true">11</span>
-                <img src="ASSET/WhatsApp%20Image%202026-11-15%20at%202.37.19%20PM.jpeg" alt="Vue de l'Université catholique du Congo en fin de journée">
+                <img src="WhatsApp%20Image%202026-11-15%20at%202.37.19%20PM.jpeg" alt="Vue de l'Université catholique du Congo en fin de journée">
             </div>
             <div class="texte">
                 <h2>La journée se termine</h2>
